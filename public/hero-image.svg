@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#F5F5F5" rx="20"/>
+  
+  <!-- Washing Machine -->
+  <g transform="translate(200, 50)">
+    <!-- Machine Body -->
+    <rect x="0" y="0" width="200" height="300" rx="20" fill="#4AC4FF"/>
+    
+    <!-- Door -->
+    <circle cx="100" cy="150" r="70" fill="white" stroke="#4AC4FF" stroke-width="10"/>
+    <circle cx="100" cy="150" r="60" fill="#4AC4FF" opacity="0.1"/>
+    
+    <!-- Control Panel -->
+    <rect x="20" y="20" width="160" height="40" rx="10" fill="#FF9F4A"/>
+    
+    <!-- Buttons -->
+    <circle cx="50" cy="40" r="8" fill="white"/>
+    <circle cx="80" cy="40" r="8" fill="white"/>
+    <circle cx="110" cy="40" r="8" fill="white"/>
+    
+    <!-- Display -->
+    <rect x="130" y="30" width="40" height="20" rx="5" fill="#FF4A8D"/>
+  </g>
+  
+  <!-- Bubbles -->
+  <circle cx="280" cy="180" r="10" fill="#4AC4FF" opacity="0.6"/>
+  <circle cx="320" cy="160" r="8" fill="#4AC4FF" opacity="0.6"/>
+  <circle cx="300" cy="200" r="12" fill="#4AC4FF" opacity="0.6"/>
+  <circle cx="260" cy="150" r="6" fill="#4AC4FF" opacity="0.6"/>
+  
+  <!-- Clothes -->
+  <path d="M120 250 Q 140 230 160 250 T 200 250" stroke="#FF4A8D" stroke-width="4" fill="none"/>
+  <path d="M140 270 Q 160 250 180 270 T 220 270" stroke="#FF9F4A" stroke-width="4" fill="none"/>
+  
+  <!-- Sparkles -->
+  <path d="M450 100L455 105L450 110L445 105L450 100Z" fill="#FF9F4A"/>
+  <path d="M480 120L485 125L480 130L475 125L480 120Z" fill="#FF9F4A"/>
+  <path d="M460 140L465 145L460 150L455 145L460 140Z" fill="#FF9F4A"/>
+</svg> 

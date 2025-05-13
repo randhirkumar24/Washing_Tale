@@ -1,26 +1,214 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-orange: #FF9F4A;
+  --primary-pink: #FF4A8D;
+  --primary-blue: #4AC4FF;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    @apply antialiased;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-gray-800;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-bold;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-[#FF4A8D] text-white px-8 py-3 rounded-xl font-semibold 
+    hover:bg-[#FF4A8D]/90 transition-all duration-200 
+    shadow-lg shadow-[#FF4A8D]/20 
+    active:scale-95 transform
+    hover:translate-y-[-2px];
+  }
+  
+  .btn-outline {
+    @apply border-2 border-[#FF9F4A] text-[#FF9F4A] px-8 py-3 rounded-xl 
+    font-semibold hover:bg-[#FF9F4A] hover:text-white transition-all duration-200 
+    active:scale-95 transform
+    hover:translate-y-[-2px]
+    hover:shadow-lg hover:shadow-[#FF9F4A]/20;
+  }
+
+  .nav-link {
+    @apply text-gray-700 hover:text-[#FF4A8D] transition-all duration-200 
+    font-medium relative after:absolute after:bottom-0 after:left-0 
+    after:w-0 after:h-0.5 after:bg-[#FF4A8D] after:transition-all 
+    hover:after:w-full;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl p-6 shadow-lg shadow-[#4AC4FF]/5 
+    hover:shadow-xl hover:shadow-[#4AC4FF]/10 transition-all duration-300 
+    border border-gray-100
+    hover:translate-y-[-4px];
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FF9F4A] to-[#FF4A8D];
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-[#FF9F4A]/10 via-[#FF4A8D]/5 to-[#4AC4FF]/10;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/80 border border-white/20
+    rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300
+    hover:bg-white/90;
+  }
+
+  .floating-element {
+    @apply animate-float hover:scale-105 transition-transform duration-300;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* Glass Effect */
+.glass {
+  @apply backdrop-blur-lg bg-white/80 border border-white/20;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  h1 {
+    @apply text-3xl leading-tight !important;
+  }
+  
+  h2 {
+    @apply text-2xl leading-tight !important;
+  }
+  
+  h3 {
+    @apply text-xl leading-tight !important;
+  }
+  
+  .container {
+    @apply px-4;
+  }
+  
+  section {
+    @apply py-8;
+  }
+
+  .btn-primary, .btn-outline {
+    @apply px-6 py-2.5 text-sm;
+  }
+}
+
+/* Responsive Container */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#FF4A8D]/50 rounded-full hover:bg-[#FF4A8D]/70;
 }

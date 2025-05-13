@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Washing Machine Body -->
+  <rect x="6" y="8" width="36" height="36" rx="8" fill="#4AC4FF"/>
+  
+  <!-- Window -->
+  <circle cx="24" cy="26" r="12" fill="white" stroke="#4AC4FF" stroke-width="2"/>
+  <circle cx="24" cy="26" r="10" fill="#4AC4FF" opacity="0.2"/>
+  <path d="M24 16C29.5228 16 34 20.4772 34 26C34 31.5228 29.5228 36 24 36C18.4772 36 14 31.5228 14 26C14 20.4772 18.4772 16 24 16Z" stroke="white" stroke-width="2"/>
+  
+  <!-- Bubbles -->
+  <circle cx="20" cy="24" r="2" fill="white" opacity="0.6"/>
+  <circle cx="28" cy="28" r="2" fill="white" opacity="0.6"/>
+  <circle cx="24" cy="22" r="1.5" fill="white" opacity="0.6"/>
+  
+  <!-- Top Panel -->
+  <rect x="6" y="4" width="36" height="8" rx="4" fill="#FF9F4A"/>
+  
+  <!-- Control Panel -->
+  <rect x="32" y="14" width="6" height="6" rx="1" fill="#FF4A8D"/>
+  <rect x="32" y="22" width="6" height="6" rx="1" fill="#FF4A8D"/>
+  
+  <!-- Sparkles -->
+  <path d="M38 2L40 4L38 6L36 4L38 2Z" fill="#FF9F4A"/>
+  <path d="M42 6L44 8L42 10L40 8L42 6Z" fill="#FF9F4A"/>
+  <path d="M34 4L36 6L34 8L32 6L34 4Z" fill="#FF9F4A"/>
+</svg> 
