@@ -62,19 +62,19 @@ const features = [
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
+    name: 'Randhir Pandey',
     role: 'Busy Professional',
     content: 'Washing Tale has made my life so much easier. Their service is reliable and my clothes always come back perfectly clean and pressed.',
     image: '/testimonial1.jpg'
   },
   {
-    name: 'Mark Davis',
+    name: 'Aman Gond',
     role: 'Business Owner',
     content: 'As a business owner, I appreciate their attention to detail and professional service. They handle our company uniforms with great care.',
     image: '/testimonial2.jpg'
   },
   {
-    name: 'Emily Chen',
+    name: 'Sudeep Mishra',
     role: 'Working Parent',
     content: 'The convenience of their pickup and delivery service is a game-changer for our busy family. Highly recommended!',
     image: '/testimonial3.jpg'
