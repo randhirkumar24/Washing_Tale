@@ -1,8 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import SchedulePickupForm from './SchedulePickupForm';
+import Link from 'next/link';
 
 const features = [
   {
@@ -68,8 +67,6 @@ const features = [
 ];
 
 const Features = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   return (
     <section className="py-20 relative">
       <div className="container mx-auto">
@@ -85,17 +82,19 @@ const Features = () => {
           </h2>
           
           {/* Schedule Pickup Button */}
-          <motion.button
-            onClick={() => setIsFormOpen(true)}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="mt-8 px-8 py-4 rounded-xl bg-gradient-to-r from-[#4AC4FF] to-[#FF4A8D] text-white font-semibold hover:shadow-lg transform transition-all duration-200"
-          >
-            Schedule Pickup
-          </motion.button>
+          <Link href="/book">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="mt-8 px-8 py-4 rounded-xl bg-gradient-to-r from-[#4AC4FF] to-[#FF4A8D] text-white font-semibold hover:shadow-lg transform transition-all duration-200"
+            >
+              Schedule Pickup
+            </motion.button>
+          </Link>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -131,12 +130,6 @@ const Features = () => {
           ))}
         </div>
       </div>
-
-      {/* Schedule Pickup Form */}
-      <SchedulePickupForm 
-        isOpen={isFormOpen}
-        onClose={() => setIsFormOpen(false)}
-      />
     </section>
   );
 };

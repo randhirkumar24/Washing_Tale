@@ -16,7 +16,7 @@ const pricingPlans = [
     ],
     color: 'text-[#4AC4FF]',
     gradient: 'from-[#4AC4FF]/20 to-[#4AC4FF]/5',
-    buttonClass: 'border-[#4AC4FF] text-[#4AC4FF] hover:bg-[#4AC4FF]'
+    buttonClass: 'bg-[#4AC4FF] text-white hover:bg-[#4AC4FF]/90'
   },
   {
     name: 'Premium',
@@ -50,7 +50,7 @@ const pricingPlans = [
     ],
     color: 'text-[#FF9F4A]',
     gradient: 'from-[#FF9F4A]/20 to-[#FF9F4A]/5',
-    buttonClass: 'border-[#FF9F4A] text-[#FF9F4A] hover:bg-[#FF9F4A]'
+    buttonClass: 'bg-[#FF9F4A] text-white hover:bg-[#FF9F4A]/90'
   }
 ];
 
@@ -130,8 +130,8 @@ const Pricing = () => {
 
                   <button 
                     className={`
-                      w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300
-                      ${plan.buttonClass} hover:shadow-lg
+                      w-full py-3 px-6 rounded-xl font-semibold transition-colors duration-200
+                      ${plan.buttonClass} active:scale-[0.98]
                     `}
                   >
                     Choose Plan

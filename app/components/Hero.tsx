@@ -1,13 +1,10 @@
 'use client';
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import SchedulePickupForm from './SchedulePickupForm';
 
 const Hero = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-
   return (
     <section className="min-h-screen pt-20 pb-16 md:pt-28 md:pb-20 bg-gradient-to-br from-white via-[#FF9F4A]/5 to-[#FF4A8D]/5">
       <div className="container">
@@ -24,22 +21,25 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
               Experience the convenience of professional laundry and dry cleaning services with free pickup and delivery. We take care of your clothes with the utmost attention to detail.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <motion.button 
-                onClick={() => setIsFormOpen(true)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="bg-[#FF4A8D] text-white px-8 py-3 rounded-xl font-semibold hover:bg-[#FF4A8D]/90 transition-colors shadow-lg shadow-[#FF4A8D]/20"
-              >
-                Schedule Pickup
-              </motion.button>
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="border-2 border-[#FF9F4A] text-[#FF9F4A] px-8 py-3 rounded-xl font-semibold hover:bg-[#FF9F4A] hover:text-white transition-all"
-              >
-                View Services
-              </motion.button>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/book">
+                <motion.button 
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full sm:w-auto bg-[#FF4A8D] text-white px-8 py-3 rounded-xl font-semibold hover:bg-[#FF4A8D]/90 transition-colors shadow-lg shadow-[#FF4A8D]/20"
+                >
+                  Schedule Pickup
+                </motion.button>
+              </Link>
+              <Link href="/services">
+                <motion.button 
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full sm:w-auto border-2 border-[#FF9F4A] text-[#FF9F4A] px-8 py-3 rounded-xl font-semibold hover:bg-[#FF9F4A] hover:text-white transition-all"
+                >
+                  View Services
+                </motion.button>
+              </Link>
             </div>
             
             <div className="grid grid-cols-2 gap-6 pt-8 max-w-md">
@@ -95,12 +95,6 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-
-      {/* Schedule Pickup Form */}
-      <SchedulePickupForm 
-        isOpen={isFormOpen}
-        onClose={() => setIsFormOpen(false)}
-      />
     </section>
   )
 }
