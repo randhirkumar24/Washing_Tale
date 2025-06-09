@@ -25,7 +25,7 @@ export default function AboutPage() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="relative h-[300px] rounded-2xl overflow-hidden">
                   <Image
-                    src="/about-image.jpg"
+                    src="/machine.jpg"
                     alt="Modern Laundry Facility"
                     fill
                     className="object-cover"
