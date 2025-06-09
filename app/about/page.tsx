@@ -33,10 +33,10 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="text-gray-600 mb-4">
-                    Founded in 2020, Washing Tale began with a simple mission: to make laundry day a breeze for busy professionals and families. We understood the challenges of balancing work, life, and household chores, which inspired us to create a service that takes the hassle out of laundry care.
+                    Founded by <strong>Shubham Srivastava (MD)</strong>, Washing Tale began with a simple mission: to provide spotless service and on-time delivery for all types of textiles and garments. Understanding the challenges of maintaining quality laundry care, we created a service that takes the hassle out of cleaning your precious clothes.
                   </p>
                   <p className="text-gray-600">
-                    Today, we're proud to serve thousands of satisfied customers, providing premium laundry and dry cleaning services with the convenience of doorstep pickup and delivery.
+                    Today, we're proud to serve the Varanasi community with professional cloth-based cleaning services, offering transparent pricing and reliable service from our location in Nagwa near Little Flower School, Lanka.
                   </p>
                 </div>
               </div>
