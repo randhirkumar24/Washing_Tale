@@ -15,7 +15,7 @@ const PageHeader = ({ title, description }: PageHeaderProps) => {
           <div className="flex items-center justify-center gap-3 mb-3 transform hover:scale-105 transition-transform duration-300">
             <div className="relative w-8 h-8">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Washing Tale Logo"
                 fill
                 className="object-contain"

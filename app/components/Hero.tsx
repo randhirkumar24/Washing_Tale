@@ -81,7 +81,7 @@ const Hero = () => {
             <div className="relative w-full aspect-square max-w-[450px] mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-[#FF9F4A]/20 to-[#FF4A8D]/20 rounded-full blur-3xl transform -translate-y-4"></div>
               <Image
-                src="/hero-image.svg"
+                src="/logo.png"
                 alt="Laundry Service Illustration"
                 fill
                 className="object-contain z-10 relative animate-float"

@@ -14,7 +14,7 @@ const Header = () => {
           <Link href="/" className="flex items-center space-x-2 shrink-0">
             <div className="relative w-8 h-8 md:w-10 md:h-10">
               <Image
-                src="/logo.svg"
+                src="/logo.png"
                 alt="Washing Tale Logo"
                 fill
                 className="object-contain"
